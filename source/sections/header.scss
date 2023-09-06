@@ -1,0 +1,20 @@
+@use '../config/variaveis.scss';
+@use'../config/reset.scss';
+@use "sass:math";
+
+@function espacosParaEm($alvoEmPixel, $contextoEmPixel: 16px) {
+  @return math.div($alvoEmPixel, $contextoEmPixel) + em;
+}
+
+header {
+  background-color: variaveis.$backgroundReader;
+  position: sticky;
+  top: 0;
+  left: 0;
+   }
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: espacosParaEm(16px) 0px;
+  }
